@@ -2,7 +2,7 @@
 Utility Functions
 """
 import matplotlib.pyplot as plt
-
+import numpy as np
 
 def plot_data(X, y, ax, pos_label="y=1", neg_label="y=0", s=80, loc='best' ):
     """ plots logistic data with two axis """
@@ -20,3 +20,16 @@ def plot_data(X, y, ax, pos_label="y=1", neg_label="y=0", s=80, loc='best' ):
     ax.figure.canvas.toolbar_visible = False
     ax.figure.canvas.header_visible = False
     ax.figure.canvas.footer_visible = False
+
+# Example data (replace with your actual X, y)
+X = np.array([[1,2], [2,3], [3,3], [5,6], [6,7]])
+y = np.array([0, 0, 1, 1, 1])
+
+# Create figure and axis
+fig, ax = plt.subplots()
+
+# Call your function
+plot_data(X, y, ax)
+
+# Show plot
+plt.show()
